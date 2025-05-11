@@ -1,0 +1,263 @@
+<html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>百度安全验证</title><style>body{margin:0;padding:0}</style><script type="text/javascript" charset="utf8" async="" src="https://bioc-static.cdn.bcebos.com/pages/BiocFacade.js"></script><style type="text/css">.bioc_popup_wrap{-webkit-tap-highlight-color:transparent;color:#292f3a;font-family:Arial,Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Heiti SC,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;font-size:14px;position:relative;-ms-touch-action:none;touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.bioc_popup_wrap .bioc_popup_ghost{background-color:rgba(0,0,0,.4);bottom:0;display:block;left:0;position:fixed;right:0;top:0;z-index:2357683636}.bioc_popup_wrap .bioc_popup_ghost .bioc_popup_ghost_close{height:20px;position:absolute;right:10px;top:10px;width:20px}.bioc_popup_wrap .bioc_box_wrap{box-sizing:border-box;display:block;left:50%;min-width:300px;position:fixed;top:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);width:-webkit-min-content;width:-moz-min-content;width:min-content;z-index:2357683636}.bioc_popup_wrap .bioc_box_wrap .bioc_box{-ms-touch-action:none;touch-action:none}</style><style type="text/css">.bioc_disaster_proven_container{box-shadow:0 0 2px rgba(0,0,0,.2);box-sizing:border-box;color:#292f3a;color:#262634;font-family:Arial,Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Heiti SC,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;font-size:14px;height:50px;position:relative;-webkit-transition:all .5s;transition:all .5s;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.bioc_disaster_proven_container:hover{box-shadow:0 0 5px rgba(0,0,0,.2)}.bioc_disaster_proven_container .bioc_disaster_proven_state_icon{margin-right:8px}.bioc_disaster_proven_content{background:#fff;border-left:6px solid #5381fd;box-sizing:border-box;cursor:pointer;overflow:hidden}.bioc_disaster_proven_content .bioc_disaster_proven_close{display:inline-block;font-family:Arial,Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Heiti SC,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;font-size:24px;height:24px;opacity:.4;position:absolute;right:8px;text-align:center;top:13px;-webkit-transition:all .5s;transition:all .5s;vertical-align:middle;width:24px}.bioc_disaster_proven_content .bioc_disaster_proven_close:hover{opacity:.9}.bioc_disaster_proven_content.bioc_disaster_proven_success{border-left-color:#5aa628}.bioc_disaster_proven_content .bioc_disaster_proven_tip_container{height:50px;padding:0 6% 0 8%}.bioc_disaster_proven_content .bioc_disaster_proven_tip_container .bioc_disaster_proven_tip_text{display:inline-block;vertical-align:middle}.bioc_disaster_proven_content .bioc_disaster_proven_tips_wrap{left:20px;position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.bioc_disaster_proven_content .bioc_disaster_proven_tips_wrap .bioc_disaster_proven_tip{cursor:pointer;display:inline-block;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle}</style><script type="text/javascript" charset="utf8" async="" src="https://bioc-static.cdn.bcebos.com/pages/bfe_captcha.js"></script><link href="https://bioc-static.cdn.bcebos.com/1.6.0.1/1957e364f04/BiocPassCaptcha.css?_=242320" rel="stylesheet" type="text/css"><link href="https://bioc-static.cdn.bcebos.com/1.6.0.1/1957e364f04/BiocCaptcha.css?_=242320" rel="stylesheet" type="text/css"><style>.passMod_puzzle-wrapper {
+  position: relative;
+  width: 290px;
+}
+.passMod_puzzle-tip {
+  height: 28px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1F1F1F;
+}.darkmode .passMod_puzzle-tip{ color: rgba(255, 255, 255, .8)}
+.passMod_puzzle-msg {
+  font-size: 14px;
+  color: red;
+}
+.passMod_puzzle-context {
+  position: relative;
+  margin-top: 16px;
+  height: 160px;
+}
+.passMod_puzzle-background {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.passMod_puzzle-block {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 100%;
+}
+.passMod_puzzle-blockv2 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 160px;
+  width: 52px;
+  background-size: 342px 160px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.passMod_puzzle-backgroundv2 {
+  display: block;
+  width: 290px;
+  height: 160px;
+  background-size: 342px 160px;
+  background-position: -52px 0;
+  background-repeat: no-repeat;
+}
+.passMod_puzzle-footer {
+  padding-top: 18px;
+  height: 72px;
+  box-sizing: border-box;
+}
+.passMod_puzzle .show {
+  opacity: 1;
+}</style><style>.passMod_select-wrapper {
+  position: relative;
+  width: 290px;
+}
+.passMod_select-tip {
+  display: inline-block;
+  margin-top: 4px;
+  height: 34px;
+  font-size: 18px;
+  font-weight: bold;
+  vertical-align: text-bottom;
+}
+.passMod_select-tip p {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+.passMod_select-tip-bg {
+  height: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  vertical-align: text-bottom;
+}
+.passMod_select-tip-bgv2 {
+  display: inline-block;
+  width: 104px;
+  height: 24px;
+  vertical-align: text-bottom;
+  background-size: 234px 154px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.passMod_select-msg {
+  font-size: 14px;
+  color: red;
+}
+.passMod_select-context {
+  position: relative;
+  height: 160px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+.passMod_select-background {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.passMod_select-backgroundv2 {
+  display: block;
+  width: 290px;
+  height: 160px;
+  background-size: 290px 191px;
+  background-position: 0 -30px;
+  background-repeat: no-repeat;
+}
+.passMod_select-block {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: black 1px solid;
+}
+.passMod_select-interactive {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.passMod_select-footer {
+  padding-top: 18px;
+  height: 72px;
+  box-sizing: border-box;
+}
+.passMod_select .show {
+  opacity: 1;
+}
+.passMod_interactive-dot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  color: #fff;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(78, 110, 242, 0.7);
+  border: rgba(255, 255, 255, 0.8) 4px solid;
+}
+</style><style>.passMod_qrcode-wrapper {
+  position: relative;
+  width: 290px;
+}
+.passMod_qrcode-tip {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  vertical-align: text-bottom;
+}
+.passMod_qrcode-tip p {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+.passMod_qrcode-tip-bg {
+  max-height: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  vertical-align: text-bottom;
+}
+.passMod_qrcode-context-wrap {
+  position: relative;
+  margin-top: 40px;
+}
+.passMod_qrcode-context {
+  position: relative;
+  width: 188px;
+  height: 188px;
+  margin: 0 auto;
+  padding: 13px;
+  box-sizing: border-box;
+  border: rgba(133, 133, 133, 0.3) 1px solid;
+  overflow: hidden;
+}
+.passMod_qrcode-background {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.passMod_qrcode-errorMessage {
+  padding-top: 10px;
+  height: 16px;
+  color: red;
+  font-size: 16px;
+  text-align: center;
+}
+.passMod_qrcode-footer {
+  padding-top: 18px;
+  height: 72px;
+  box-sizing: border-box;
+}
+.passMod_qrcode .show {
+  opacity: 1;
+}
+</style><style>.passMod_spin-wrapper {
+  position: relative;
+  width: 290px;
+}
+.passMod_spin-tip {
+  height: 28px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1F1F1F;
+}.darkmode .passMod_spin-tip{ color: rgba(255, 255, 255, .8)}
+.passMod_spin-msg {
+  font-size: 14px;
+  color: red;
+}
+.passMod_spin-context-wrap {
+  position: relative;
+  margin-top: 16px;
+}
+.passMod_spin-context {
+  position: relative;
+  width: 152px;
+  height: 152px;
+  border-radius: 76px;
+  margin: auto;
+  overflow: hidden;
+}
+.passMod_spin-background {
+  display: block;
+  width: 152px;
+  height: 152px;
+}
+.passMod_spin-coordinate {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 152px;
+  height: 152px;
+  z-index: -1;
+}
+.passMod_spin-AI {
+  position: absolute;
+  bottom: 11px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 11px;
+  line-height: 11px;
+  color: white;
+  opacity: 0.5;
+}
+.passMod_spin-footer {
+  padding-top: 30px;
+  height: 84px;
+  box-sizing: border-box;
+}
+.passMod_spin .show {
+  opacity: 1;
+}</style></head><body><script>function ieOnEnd(script,cb){script.onreadystatechange=function(){if(this.readyState!=='complete'&&this.readyState!=='loaded'){return}this.onreadystatechange=null;cb(null,script)}}function stdOnEnd(script,cb){script.onload=function(){this.onerror=this.onload=null;cb(null,script)};script.onerror=function(e){this.onerror=this.onload=null;cb(new Error(`Failed to load ${this.src}`),script)}}function loadScript(src,opts,cb){var script=document.createElement('script');if(typeof opts==='function'){cb=opts;opts={}}opts=opts||{};cb=cb||function(){};script.type=opts.type||'text/javascript';script.charset=opts.charset||'utf8';script.async='async'in opts?!!opts.async:true;script.src=src;if(opts.attrs){setAttributes(script,opts.attrs)}if(opts.text){script.text=''+opts.text}var onend='onload'in script?stdOnEnd:ieOnEnd;onend(script,cb);if(!script.onload){stdOnEnd(script,cb)}document.head.appendChild(script)}</script><script>window.BIOC_OPTIONS={ak:'mjM92DGYrBpDUGTonvKQRZZPoZrmeH8e',subid:'baike_pc_lemmapage',ext:'lag/qofV5YN5AQHgG+zEoGE4gQmXQZeiJ4K6Wcx3YnKCNOLIaCXdVrs2Uj3hhW0hY9jBNTFGeaBbCeg5uVO3DXaVAhZtiCLsk67UGzZ9M/jNA6iXl64OdclQsMbVI/iE',backurl:'https://baike.baidu.com/item/%E8%B5%9B%E9%A9%AC%E4%BC%9A%EF%BC%88%E5%93%88%E8%90%A8%E5%85%8B%E6%97%8F%E8%B5%9B%E9%A9%AC%EF%BC%89',closeable:false};</script><script>(function(){var origins=['https://bioc-static.cdn.bcebos.com','https://bioc-static-standby.cdn.bcebos.com','https://seccaptcha.baidu.com/v1/webapi/static','https://seccaptcha-1.baidu.com/v1/webapi/static'];var biocFacadePath='/pages/BiocFacade.js';var bootstrapPath='/pages/bfe_captcha.js';var loadAssetsWithStandby=function(path,cb){var requestOrigins=origins.slice();var doRequest=function(){if(requestOrigins.length===0){cb(new Error('load assets failed'))}else{var origin=requestOrigins.shift();loadScript(origin+path,function(err){if(!err){cb()}else{doRequest()}})}};doRequest()};var loadBioc=function(cb){loadAssetsWithStandby(biocFacadePath,cb)};var loadBootstrap=function(cb){loadAssetsWithStandby(bootstrapPath,cb)};var handlerError=function(err){alert('页面加载失败，请刷新页面重试');console.error(err)};loadBioc(function(err){if(err){handlerError(err);return}loadBootstrap(function(err){if(err){handlerError(err)}})})})()</script><script type="text/javascript" charset="utf8" async="" src="https://bioc-static.cdn.bcebos.com/1.6.0.1/1957e364f04/BiocPassCaptcha.js?_=242320"></script><script type="text/javascript" charset="utf8" async="" src="https://bioc-static.cdn.bcebos.com/1.6.0.1/1957e364f04/BiocCaptcha.js?_=242320"></script><script type="text/javascript" charset="utf8" async="" src="https://passport.baidu.com/static/sdk-machine/js/mkd_v2.js?_=242320"></script><div class="bioc_popup_wrap"><div class="bioc_popup_ghost"></div><div class="bioc_box_wrap"><div class="bioc_box" style="width: 360px; opacity: 1; transition: opacity 0.4s ease-in;"><div><div class="bioc_disaster_proven_container"><div aria-label="点击按钮开始验证" tabindex="0" class="bioc_disaster_proven_content "><div class="bioc_disaster_proven_tip_container"><div class="bioc_disaster_proven_tips_wrap"><div class="bioc_disaster_proven_tip"><a class="bioc_disaster_proven_state_icon"></a><span class="bioc_disaster_proven_tip_text">点击按钮开始验证</span></div></div></div></div></div></div></div></div></div></body><!--loadScript--></html>
