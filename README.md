@@ -57,7 +57,7 @@ python baidu_baike_collection.py
 
 #### 2.3 DeepSeek API 清洗
 
-使用之前需自行申请 DeepSeek 的 API-KEY 并填入 `baidu_data_process.py/web_data_process.py` 两文件的对应位置或者以环境变量形式存于终端。依次运行以下三条命令（前两条顺序可随意调换）：
+使用之前需自行申请 [DeepSeek](https://api-docs.deepseek.com/zh-cn/) 的 API-KEY 并填入 `baidu_data_process.py/web_data_process.py` 两文件的对应位置或者以环境变量形式存于终端。依次运行以下三条命令（前两条顺序可随意调换）：
 
 ```bash
 # 百度百科数据清洗
@@ -76,11 +76,11 @@ python web_baidu_merge.py
 python QA_generate.py
 ```
 
-为了适配后续的微调，本项目制作了 6 类问题，每类问题共 3 种不同 prompt 模板，具体设计见 `QA_generate.py` 源文件。
+为了适配后续的微调，本项目制作了6类问题，每类问题共3种不同 prompt 模板，具体设计见 `QA_generate.py` 源文件。
 
 #### 2.5 LLaMA-Factory 微调
 
-这部分内容请自行参考 [官方文档]([LLaMA Factory](https://llamafactory.readthedocs.io/zh-cn/latest/)) 及 [官方项目仓库](https://github.com/hiyouga/LLaMA-Factory)，我们提供了用于 `Qwen2.5-7B-Instruct` 微调、推理以及评估测试的配置文件，具体可见 `LLaMA-Factory` 文件夹。
+这部分内容请自行参考 [官方文档](https://llamafactory.readthedocs.io/zh-cn/latest/) 及 [官方项目仓库](https://github.com/hiyouga/LLaMA-Factory)，我们提供了用于 `Qwen2.5-7B-Instruct` 微调、推理以及评估测试的配置文件，具体可见 `LLaMA-Factory` 文件夹。
 
 >- **Qwen2.5-7B-Instruct-Lora.yaml**：Lora 微调配置
 >- **Qwen2.5-7B-Instruct-evaluation.yaml**：基座模型评估配置
