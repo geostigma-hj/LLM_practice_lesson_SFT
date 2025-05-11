@@ -1,17 +1,17 @@
 ### 0. 项目说明
 
-本项目为大模型实践的课程作业，主要目标是微调一个有关非遗项目的问答助手。
+本项目为大模型实践课程作业，主要目标是微调一个非遗项目的问答助手。
 
 ### 1. 项目文件说明
 
 #### 1.1 可执行文件说明
 
 - `raw_data_collection_web.py`：从中国非遗文化官网初步爬取数据的脚本，运行后会在 `raw_data_items`文件夹下按类别生成爬取后的 csv 文件。
-- `raw_data_item_enrich.py`：按照初步爬取的数据对项目详情界面进行二次爬取丰富信息，运行后会在 `enrich_web_items` 文件夹下生成丰富版数据文件。
-- `enrich_data_item_merge.py`：用于合并二次爬取得到的数据文件中的冗余信息，运行后会在`merged_web_items` 文件夹下生成压缩后的数据文件并在当前目录得到 `非遗项目_web.csv` 文件。
+- `raw_data_item_enrich.py`：按照初步爬取的数据对项目详情界面进行二次爬取的脚本，运行后会在 `enrich_web_items` 文件夹下生成字段更加丰富的数据文件。
+- `enrich_data_item_merge.py`：用于压缩二次爬取得到的数据文件中的冗余信息，运行后会在`merged_web_items` 文件夹下生成压缩后的数据文件并在当前目录得到 `非遗项目_web.csv` 文件。
 - `html_file_download.py`：用于下载百度百科搜索界面 HTML 源文件的脚本。
 - `baidu_baike_collection.py`：用于从百度百科爬取/解析数据的脚本。
-- `baidu_data_process.py/web_data_process.py`：使用 DeepSeek 清洗数据+数据格式整理的脚本
+- `baidu_data_process.py/web_data_process.py`：使用 DeepSeek API 清洗数据+数据格式整理的脚本。
 - `web_baidu_merge.py`：合并两个数据源数据的脚本。
 - `QA_generate.py`：生成 QA 问答数据集的脚本。
 
@@ -20,8 +20,8 @@
 - `baidu_html_files`：用于存储 `html_file_download.py` 脚本下载的 HTML 源文件。
 - `bert-base-chinese`：存储 BERT 模型权重，用于百度百科数据爬取过程的语义相似度分析。
 - `enrich_web_items`、`merged_web_items`、`raw_data_items` 均用于存储临时数据文件（共计10个类别的项目数据）。
-- `LLaMA-Factory`：包含用于 `Qwen2.5-7B-Instruct`微调、推理以及测试的配置文件。
-- `Qwen2.5`：包含模型下载脚本（默认下载到 `Qwen2.5/model` 文件夹下）。
+- `LLaMA-Factory`：包含用于 `Qwen2.5-7B-Instruct` 微调、推理以及测试的配置文件。
+- `Qwen2.5`：模型下载脚本（默认下载到 `Qwen2.5/model` 文件夹下）。
 - `fake_useragent_0.1.11.json`：数据爬取过程中用于伪造数据头的辅助文件。
 - `final_dataset.csv`：清洗完的最终数据集。
 - `qa_dataset.json`：最终生成的用于微调的 QA 数据集文件。
@@ -33,7 +33,7 @@
 按顺序依次执行下面三条命令
 
 ```bash
-# 一阶段数据爬取
+# 基础数据爬取
 python raw_data_collection_web.py
 
 # 二阶段数据爬取
@@ -48,8 +48,8 @@ python enrich_data_item_merge.py
 按顺序依次执行下面两条命令
 
 ```bash
-# 爬取网页源文件
-python html_file_download.py # 这一步需要使用 selenium，需要再本地或者有谷歌浏览器的终端运行
+# 网页源文件爬取
+python html_file_download.py # 这一步需要使用 selenium，需要在本地或者有谷歌浏览器的终端运行
 
 # 数据解析与清洗
 python baidu_baike_collection.py
@@ -93,18 +93,18 @@ python QA_generate.py
 
 #### 3.1 微调损失变化
 
-<img src="training_loss.png" style="width:75%;">
+<img src="imgs/training_loss.png" style="width:75%; float:center">
 
-<img src="training_eval_loss.png" style="width: 75%">
+<img src="imgs/training_eval_loss.png" style="width: 75%; float:center">
 
 #### 3.2 微调前后模型评估结果
 
 微调前：
 
-<img src="origin_predict.png" style="width:50%">
+<img src="imgs/origin_predict.png" style="width:50%; float:center">
 
 微调后：
 
-<img src="lora_predict.png" style="width:50%">
+<img src="imgs/lora_predict.png" style="width:50%; float:center">
 
 可以看到微调后模型的 BLEU 和 ROUGE 指标显著优于微调前基线，说明微调效果还不错。
