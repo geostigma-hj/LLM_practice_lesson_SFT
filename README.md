@@ -18,6 +18,7 @@
 #### 1.2 文件夹及其他文件说明
 
 - `baidu_html_files`：用于存储 `html_file_download.py` 脚本下载的 HTML 源文件。
+- `baike_dataset`：自行爬取的百度百科数据，里面包含3014个 HTML 文件。
 - `bert-base-chinese`：存储 BERT 模型权重，用于百度百科数据爬取过程的语义相似度分析。
 - `enrich_web_items`、`merged_web_items`、`raw_data_items` 均用于存储临时数据文件（共计10个类别的项目数据）。
 - `LLaMA-Factory`：包含用于 `Qwen2.5-7B-Instruct` 微调、推理以及测试的配置文件。
